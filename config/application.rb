@@ -10,6 +10,7 @@ module Erp1
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
+    config.encoding = "utf-8"
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
@@ -23,5 +24,16 @@ module Erp1
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    class Application < Rails::Application
+    # Configurar timezone para Brasília
+    config.time_zone = 'Brasilia'
+    
+    # Banco de dados também em UTC (recomendado)
+    config.active_record.default_timezone = :utc
+    
+    # Formato padrão brasileiro
+    config.i18n.default_locale = :'pt-BR'
+  end
   end
 end
