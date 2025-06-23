@@ -13,10 +13,13 @@ class Inventory < ApplicationRecord
   # Callbacks
   after_create :update_product_stock
   
-  # Scopes
-  scope :entries, -> { where(movement_type: 'IN') }
-  scope :exits, -> { where(movement_type: 'OUT') }
+  # Scopes - NOMES ALTERADOS PARA EVITAR CONFLITO
+  scope :stock_entries, -> { where(movement_type: 'IN') }      # Mudou de :entries
+  scope :stock_exits, -> { where(movement_type: 'OUT') }       # Mudou de :exits
   scope :recent, -> { order(created_at: :desc) }
+  scope :by_product, ->(product_id) { where(product_id: product_id) }
+  scope :by_movement_type, ->(type) { where(movement_type: type) }
+  scope :today, -> { where(created_at: Date.current.beginning_of_day..Date.current.end_of_day) }
   
   private
   
