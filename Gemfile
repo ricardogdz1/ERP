@@ -66,7 +66,7 @@ gem "bcrypt", "~> 3.1"
 
 gem "kaminari", "~> 1.2"
 
-gem "jwt", "~> 3.0"
+gem "jwt", "~> 3.1"
 
 gem "rack-cors", "~> 3.0"
 
