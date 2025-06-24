@@ -1,26 +1,5 @@
-# README
+# ERP System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sistema ERP completo com backend Rails e mobile React Native.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ERP1
-# ERP1
+## Estrutura do Projeto
